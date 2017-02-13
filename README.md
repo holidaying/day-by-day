@@ -16,4 +16,8 @@ else {
 }
  return arr.join('');}
 }
+
 </code>
+
+2.有意思的算法（真假美猴王）
+http://www.tuicool.com/articles/I3M7ZzN

@@ -26,7 +26,7 @@ http://www.tuicool.com/articles/I3M7ZzN
    ~~4.5=-4;
    ```
    都是取整数，但是`~~`纯粹是取整数，不参与数学性质，Math.floor()有明确的数学意义，向下取整。负数的时候存在明显区别
- ###4.查找存在属性的对象
+ ### 4.查找存在属性的对象
 ```
  function whatIsInAName(collection, source) {
   // What's in a name?

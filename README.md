@@ -46,3 +46,48 @@ http://www.tuicool.com/articles/I3M7ZzN
 }
 whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
 ```
+### es6 Generator 形式上，Generator 函数是一个普通函数，但是有两个特征。一是，function关键字与函数名之间有一个星号；二是，函数体内部使用yield语句，定义不同的内部状态（yield在英语里的意思就是“产出”）。
+* 1.yield普通数值
+```
+function* Hello(){
+ yield 1;
+ yield 2;
+}
+var hello = Hello();
+console.log(hello.next());  // { value:1, done:false }
+console.log(hello.next());  // {  value:2, done:false }
+console.log(hello.next());  // { value:undefined, done:true }
+```需要next.value才能把值打印出来。
+* 2.yield函数
+```
+function delay(time, cb){
+ setTimeout(function(){
+   cb && cb()
+ },time);
+}
+function cl(){
+  yieldDelay.next();
+}
+function* YieldDelay(){
+  yield delay(3200,cl);
+  console.log('3200ms done!');
+  yield delay(4400,cl);
+  console.log('4400ms done!');
+  yield delay(5500,cl);
+  console.log('5500ms done!');
+}
+var yieldDelay = YieldDelay();
+yieldDelay.next();
+```
+next是直接执行函数
+* 3.可以直接执行yield后面的函数
+```
+function* Hello(){
+ yield console.log("111");
+ yield console.log("222");
+}
+var hello = Hello();
+console.log(hello.next());  // { value:1, done:false }
+console.log(hello.next());  // {  value:2, done:false }
+console.log(hello.next());  // { value:undefined, done:true }
+```

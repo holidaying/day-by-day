@@ -120,3 +120,13 @@ function uniteUnique(arrx) {
 
 uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
 ```
+### 8.技高一筹的正则表达式,带回调函数
+```
+function convertHTML(str) {
+  return str.replace(/[&<>"']/g, function($0) {
+        return "&" + {"&":"amp", "<":"lt", ">":"gt", '"':"quot", "'":"apos"}[$0] + ";";
+    });
+}
+
+convertHTML("Dolce & Gabbana");
+```

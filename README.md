@@ -57,7 +57,8 @@ var hello = Hello();
 console.log(hello.next());  // { value:1, done:false }
 console.log(hello.next());  // {  value:2, done:false }
 console.log(hello.next());  // { value:undefined, done:true }
-```需要next.value才能把值打印出来。
+需要next.value才能把值打印出来。
+```
 * 2.yield函数
 ```
 function delay(time, cb){
@@ -78,8 +79,8 @@ function* YieldDelay(){
 }
 var yieldDelay = YieldDelay();
 yieldDelay.next();
-```
 next是直接执行函数
+```
 * 3.可以直接执行yield后面的函数
 ```
 function* Hello(){
@@ -91,7 +92,7 @@ console.log(hello.next());  // { value:1, done:false }
 console.log(hello.next());  // {  value:2, done:false }
 console.log(hello.next());  // { value:undefined, done:true }
 ```
-###6数字转成字母和字母转成数字str.charCodeAt(pos)和String.fromCharCode(number)
+### 6.数字转成字母和字母转成数字str.charCodeAt(pos)和String.fromCharCode(number)
 ```
 function fearNotLetter(str) {
   for(var i=0;i<str.length-1;i++)

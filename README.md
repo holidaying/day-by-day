@@ -69,7 +69,7 @@ function cl(){
   yieldDelay.next();
 }
 function* YieldDelay(){
-  yield delay(3200,cl);
+  yield delay(3200,cl); 
   console.log('3200ms done!');
   yield delay(4400,cl);
   console.log('4400ms done!');
@@ -91,7 +91,7 @@ console.log(hello.next());  // { value:1, done:false }
 console.log(hello.next());  // {  value:2, done:false }
 console.log(hello.next());  // { value:undefined, done:true }
 ```
-### 6数字转成字母和字母转成文字str.charCodeAt(pos)和String.fromCharCode(number)
+### 6数字转成字母和字母转成数字str.charCodeAt(pos)和String.fromCharCode(number)
 ```
 function fearNotLetter(str) {
   for(var i=0;i<str.length-1;i++)
@@ -103,5 +103,5 @@ function fearNotLetter(str) {
     }
   return undefined;
 }
+fearNotLetter("abce")
 ```
-fearNotLetter("abce");

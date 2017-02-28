@@ -106,3 +106,17 @@ function fearNotLetter(str) {
 }
 fearNotLetter("abce")
 ```
+### 7.Array.from() 方法从一个类似数组或可迭代对象创建一个新的数组实例。[查看地址](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)Array.from()，reduce()，array.indexOf()合并数组去掉重复的数子
+```
+function uniteUnique(arrx) {
+  var args = Array.from(arguments);
+  var arr = args.reduce(function(prev,cur,index,array){
+    return prev.concat(cur);
+  });
+  return arr.filter(function(item,index,array){
+    return array.indexOf(item) === index;
+  });
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+```

@@ -91,3 +91,17 @@ console.log(hello.next());  // { value:1, done:false }
 console.log(hello.next());  // {  value:2, done:false }
 console.log(hello.next());  // { value:undefined, done:true }
 ```
+### 6数字转成字母和字母转成文字str.charCodeAt(pos)和String.fromCharCode(number)
+```
+function fearNotLetter(str) {
+  for(var i=0;i<str.length-1;i++)
+    {
+      if(str.charCodeAt(i+1)-str.charCodeAt(i)==2)
+        {
+          return String.fromCharCode(str.charCodeAt(i)+1);
+        }
+    }
+  return undefined;
+}
+```
+fearNotLetter("abce");

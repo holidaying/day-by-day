@@ -130,3 +130,16 @@ function convertHTML(str) {
 
 convertHTML("Dolce & Gabbana");
 ```
+### 9.代码需要严谨，例如重构函数
+```
+String.prototype.repeatify = String.prototype.repeatify || function(times) {
+   var str = '';
+ 
+   for (var i = 0; i < times; i++) {
+      str += this;
+   }
+ 
+   return str;
+};
+```
+用||来判断是否定义过。

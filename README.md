@@ -143,3 +143,26 @@ String.prototype.repeatify = String.prototype.repeatify || function(times) {
 };
 ```
 用||来判断是否定义过。
+
+### 10.原生的http请求方式
+```
+var xhr = null;
+if (window.XMLHttpRequest){// code for all new browsers
+	  xhr=new XMLHttpRequest();
+}
+else if (window.ActiveXObject){// code for IE5 and IE6
+	  xhr=new ActiveXObject("Microsoft.XMLHTTP");
+}
+xhr.onreadystatechange = function(){
+	
+    var XMLHttpReq = xhr;
+    if (XMLHttpReq.readyState == 4) {
+        if (XMLHttpReq.status == 200) {
+        }
+    }
+};
+xhr.open("GET", ulr, true);
+// xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xhr.send();
+}
+```

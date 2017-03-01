@@ -166,3 +166,17 @@ xhr.open("GET", ulr, true);
 xhr.send();
 }
 ```
+### 11.vue router2.0去掉#。
+```
+html5模式
+当开启 history选项时，就打开了html5模式。去掉了#号。
+注意
+启用 HTML5 history 模式。利用 history.pushState() 和 history.replaceState() 来管理浏览历史记录。
+注意： 当使用 HTML5 history 模式时，服务器需要被正确配置 以防用户在直接访问链接时会遇到404页面。
+history的选项如上所说，需要正确配置以防止直接访问时404错误。
+什么意思呢？
+比如/foo/bar，这个路径是由vue-router跳转到的，而不是真实存在的路径，所以当你直接访问时返回的是404，除非你是在express项目中运行，所有的路径都转向了index.html。
+而直接部署静态页的方式，你需要在nginx中配置rewrite参数，重新跳转到index.html页面上。
+Nginx
+ rewrite ^(.+)$ /index.html last;
+ ```

@@ -182,3 +182,15 @@ Nginx
  ```
  ### 12关于JSON字符串
  > json字符串必须是键和键值组成，如果有数组，数组里面也必须是对象的键和键值。json字符串不能尾部带有多余的，。否则json编译不通过
+ 
+ ### 行首行尾禁则与段落对齐
+* 1.采用 text-align: justify; 实现段落对齐；
+* 2.采用 text-justify: inter-ideograph; 解决 IE 下中英混排问题；
+* 3.部分 webkit 浏览器在处理中英混排时会出现超过 1em 的间隙，可采用 word-break: break-all; 解决，但会导致行首行尾禁则失效。
+```
+ p {
+    text-align: justify;
+    text-justify: inter-ideograph; /* IE 私有，解决中英混排 */
+    word-break: break-all; /* For webkit */
+}
+```

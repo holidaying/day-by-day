@@ -197,3 +197,6 @@ Nginx
 ### 14.css-loader学习地址
 
 [https://my.oschina.net/dawd/blog/788155](https://my.oschina.net/dawd/blog/788155)
+
+### 15.vue webpack详解
+[http://www.cnblogs.com/iSAM2016/p/6492951.html](http://www.cnblogs.com/iSAM2016/p/6492951.html)

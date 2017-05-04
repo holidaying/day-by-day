@@ -200,3 +200,7 @@ Nginx
 
 ### 15.vue webpack详解
 [http://www.cnblogs.com/iSAM2016/p/6492951.html](http://www.cnblogs.com/iSAM2016/p/6492951.html)
+
+### 16.关于file上传
+
+https://www.qcloud.com/community/article/985614?fromSource=gwzcw.114038.114038.114038
